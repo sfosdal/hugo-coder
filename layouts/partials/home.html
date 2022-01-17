@@ -9,8 +9,9 @@
       <div class="avatar"><img src="https://www.gravatar.com/avatar/{{md5 .}}?s=240&d=mp" alt="gravatar"></div>
     {{ end }}
     <h1>{{ .Site.Params.author }}</h1>
+    <img src="images/1x1/00000088.png" width="100" height="2"/>
     {{ if reflect.IsSlice .Site.Params.info }}
-    <h2>{{ range .Site.Params.info }}{{.}}<br>{{ end}}</h2>
+    {{ range .Site.Params.info }}<h2>{{.}}</h2>{{ end}}
     {{ else }}
     <h2>{{ .Site.Params.info }}</h2>
     {{ end }}
